@@ -13,14 +13,16 @@ class Triangle
   end 
   
   def kind 
+    if(@first_side  <=0) || (@second_side<=0) || (@third_side<=0)
+      raise TriangleError
+    elsif (@first_side + @second_side < @third_side)||()||()
     if @first_side == @second_side && @first_side == @third_side
       :equilateral
     elsif @first_side == @second_side || @first_side == @third_side || @second_side == @third_side
       :isosceles
     elsif @first_side != @second_side && @first_side != @third_side && @second_side != @third_side
       :scalene
-    elsif @first_side == 0 && @second_side == 0 && @third_side ==0
-      raise TriangleError
+    
     end 
   end 
  
